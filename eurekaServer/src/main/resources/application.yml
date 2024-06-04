@@ -1,0 +1,16 @@
+#spring.application.name=microservice
+
+spring:
+  application:
+    name: eurekaMicroservice
+
+
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    register-with-eureka: false  # não deixa o eureka se autoregistrar como cliente
+    fetch-registry: false # não deixar buscar registros de microservice porque sera função do GATWAEY
+
