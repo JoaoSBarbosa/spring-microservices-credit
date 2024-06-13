@@ -11,6 +11,6 @@ server:
 
 eureka:
   client:
-    register-with-eureka: false  # não deixa o eureka se autoregistrar como cliente
-    fetch-registry: false # não deixar buscar registros de microservice porque sera função do GATWAEY
+    register-with-eureka: false  # nao deixa o eureka se autoregistrar como cliente
+    fetch-registry: false # nao deixar buscar registros de microservice porque sera funï¿½ï¿½o do GATWAEY
 
