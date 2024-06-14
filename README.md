@@ -16,6 +16,10 @@ Este projeto é uma aplicação baseada em microserviços projetada para lidar c
 - [Contribuição](https://chatgpt.com/c/cc9a9d90-aa23-45f5-ab88-a0ba7ad6a9d1#contribuição)
 - [Licença](https://chatgpt.com/c/cc9a9d90-aa23-45f5-ab88-a0ba7ad6a9d1#licença)
 
+## Diagrama
+![Descrição da imagem](./diagrama.png)
+
+
 ## Arquitetura
 
 A arquitetura do projeto é baseada em microserviços, onde cada serviço é responsável por um aspecto específico da funcionalidade da aplicação. Os serviços se comunicam entre si através de APIs REST e são registrados no Eureka para descoberta de serviços. O API Gateway lida com o roteamento e fornece um único ponto de entrada para os microserviços.
