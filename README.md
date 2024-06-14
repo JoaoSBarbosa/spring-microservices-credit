@@ -1,4 +1,12 @@
-![GitHub top language](https://img.shields.io/github/languages/top/JoaoSBarbosa/spring-microservices-credit) ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/JoaoSBarbosa/spring-microservices-credit)
+![GitHub top language](https://img.shields.io/github/languages/top/JoaoSBarbosa/spring-microservices-credit) ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/JoaoSBarbosa/spring-microservices-credit) ![Último commit](https://img.shields.io/github/last-commit/JoaoSBarbosa/spring-microservices-credit?label=%C3%9Altimo%20commit) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.6.4-brightgreen) ![Java Version](https://img.shields.io/badge/Java-17-blue) ![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-2021.0.3-blue) ![Maven Central](https://img.shields.io/maven-central/v/org.springframework.cloud/spring-cloud-dependencies) ![Eureka Server](https://img.shields.io/badge/Eureka%20Server-enabled-brightgreen) ![Eureka Client](https://img.shields.io/badge/Eureka%20Client-enabled-brightgreen) ![Spring Cloud Gateway](https://img.shields.io/badge/Spring%20Cloud%20Gateway-enabled-brightgreen)
+
+
+
+
+
+
+
+
 
 
 
