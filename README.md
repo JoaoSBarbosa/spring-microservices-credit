@@ -1,3 +1,6 @@
+![GitHub top language](https://img.shields.io/github/languages/top/JoaoSBarbosa/spring-microservices-credit)
+
+
 # Projeto de Microserviços para Registro de Clientes, Emissão de Cartão de Crédito, Análise de Crédito e Gestão de Crédito
 
 ## Visão Geral
