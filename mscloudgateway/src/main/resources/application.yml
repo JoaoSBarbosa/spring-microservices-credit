@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: mscloudgateway
+
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # habilitando o localizador de serviços
+          lower-case-service-id: true #definindo que a localização sera por lowercase(caixa baixa)
+
+server:
+  port: 8080 # porta fixa porque o gatway tera apenas uma instancia
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
