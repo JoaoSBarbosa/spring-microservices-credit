@@ -5,6 +5,7 @@ import com.joaobarbosa.msclients.application.services.ClientService;
 import com.joaobarbosa.msclients.domain.Client;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -15,12 +16,14 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/clients")
+@Slf4j
 public class ClientsResource {
 
     private final ClientService clientService;
 
     @GetMapping
     public String status() {
+        log.info("Obtendo o stataus do microserviço de cliente");
         return "OK";
     }
 
