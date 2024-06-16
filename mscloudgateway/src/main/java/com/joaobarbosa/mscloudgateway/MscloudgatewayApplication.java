@@ -38,6 +38,7 @@ public class MscloudgatewayApplication {
 				// Define uma rota que redireciona todas as requisições que correspondem ao
 				// caminho "/clients/**" para o microserviço "msclients" usando balanceamento de carga (lb)
 				.route(r -> r.path("/clients/**").uri("lb://msclients"))
+				.route(r -> r.path("/cards/**").uri("lb://mscards"))
 				.build();
 	}
 }
