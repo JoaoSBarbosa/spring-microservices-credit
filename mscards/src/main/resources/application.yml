@@ -1,18 +1,18 @@
 spring:
   application:
-    name: mscards  # Define o nome da aplicação como "mscards"
+    name: mscards  # Define o nome da aplicaï¿½ï¿½o como "mscards"
 
 server:
-  port: 0  # Configura o servidor para escolher uma porta aleatória disponível, útil para evitar conflitos de porta
+  port: 0  # Configura o servidor para escolher uma porta aleatï¿½ria disponï¿½vel, ï¿½til para evitar conflitos de porta
 
-# Configuração para inscrição do microserviço no servidor Eureka
+# Configuraï¿½ï¿½o para inscriï¿½ï¿½o do microserviï¿½o no servidor Eureka
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka  # Define a URL do servidor Eureka para o registro do microserviço
+      defaultZone: http://localhost:8761/eureka  # Define a URL do servidor Eureka para o registro do microserviï¿½o
 
   instance:
-    # Configuração para nomear a instância do microserviço
-    # Usa uma combinação do nome da aplicação e um valor aleatório como ID da instância
-    # Isso garante que cada instância do serviço tenha um ID único, evitando conflitos
+    # Configuracao para nomear a instancia do microservico
+    # Usa uma combinacao do nome da aplicacao e um valor aleatorio como ID da instancia
+    # Isso garante que cada instancia do servico tenha um ID unico, evitando conflitos
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}

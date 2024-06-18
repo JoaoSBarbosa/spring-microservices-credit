@@ -1,10 +1,12 @@
 package com.joaobarbosa.mscards.domain;
 
+import com.joaobarbosa.mscards.domain.enums.FlagCard;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 @NoArgsConstructor
 @Data
@@ -17,14 +19,16 @@ public class Card implements Serializable {
     private Long id;
     @Column(name = "nome_cartao")
     private String name;
+    @Enumerated(EnumType.STRING)
     @Column(name = "bandeira_cartao")
-    private String flag;
+    private FlagCard flag;
     @Column(name = "renda")
-    private String income;
+    private BigDecimal income;
     @Column(name = "limite_cartao")
-    private String limit;
+    private BigDecimal limit;
 
-    public Card(String limit, String income, String flag, String name) {
+
+    public Card(BigDecimal limit, BigDecimal income, FlagCard flag, String name) {
         this.limit = limit;
         this.income = income;
         this.flag = flag;
