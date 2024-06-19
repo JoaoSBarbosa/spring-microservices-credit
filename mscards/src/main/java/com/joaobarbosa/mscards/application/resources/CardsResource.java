@@ -1,8 +1,11 @@
 package com.joaobarbosa.mscards.application.resources;
 
+import com.joaobarbosa.mscards.application.dto.CardClientResponseDTO;
 import com.joaobarbosa.mscards.application.dto.CardRequestDTO;
+import com.joaobarbosa.mscards.application.services.CardClientService;
 import com.joaobarbosa.mscards.application.services.CardService;
 import com.joaobarbosa.mscards.domain.Card;
+import com.joaobarbosa.mscards.domain.CardClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -13,6 +16,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @RequiredArgsConstructor
@@ -21,6 +25,7 @@ import java.util.List;
 public class CardsResource {
 
     private final CardService cardService;
+    private final CardClientService cardClientService;
 
     @GetMapping
     public ResponseEntity<String> getStatus() {
@@ -33,7 +38,7 @@ public class CardsResource {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @GetMapping("/by_income")
+    @GetMapping(params = "income")
     public ResponseEntity<List<Card>> getCardsIncomeLessOrEqual(@RequestParam("income") Long income){
         List<Card> cards = cardService.getCardsIncomeLessOrEqual(income);
         if(cards.isEmpty()){
@@ -49,4 +54,10 @@ public class CardsResource {
         return ResponseEntity.ok(cards);
     }
 
+    @GetMapping(params = "cpf")
+    public ResponseEntity<List<CardClientResponseDTO>> getCardsClientByCPF(@RequestParam("cpf") String cpf) {
+        List<CardClient> cardClients = cardClientService.getCardsByClient(cpf);
+        List<CardClientResponseDTO> cardsClientDTO = cardClients.stream().map(CardClientResponseDTO::fromEntity).collect(Collectors.toList());
+        return ResponseEntity.ok(cardsClientDTO);
+    }
 }
