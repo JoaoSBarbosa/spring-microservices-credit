@@ -47,7 +47,7 @@ public class ClientsResource {
      * @return Um ResponseEntity contendo os dados do cliente se encontrado, ou status 404 se não encontrado.
      */
     @GetMapping(params = "cpf")
-    public ResponseEntity<Client> getClientDataByCpf(@RequestParam("cpf") String cpf){
+    public ResponseEntity getClientDataByCpf(@RequestParam("cpf") String cpf){
 
         Optional<Client> client = clientService.findByCpf(cpf);
         // Usa map para transformar o Optional<Client> em Optional<ResponseEntity<Client>>

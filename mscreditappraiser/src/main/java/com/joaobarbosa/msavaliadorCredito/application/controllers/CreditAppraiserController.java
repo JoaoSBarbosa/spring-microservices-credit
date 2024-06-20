@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CreditAppraiserController {
 
     private final CreditAppraiserService creditAppraiserService;
+
     @GetMapping
     public String status (){
         return "MS CREDIT OK";
@@ -28,6 +29,7 @@ public class CreditAppraiserController {
         ClientSituationDTO clientSituationDTO = creditAppraiserService.creditAppraiser(cpf);
         // consultar miscroserviço de cartões para obter os dados de cartões associado ao cliente
 
+        return ResponseEntity.ok(clientSituationDTO);
     }
 
 
