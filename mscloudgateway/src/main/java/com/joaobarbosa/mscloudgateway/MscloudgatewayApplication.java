@@ -39,6 +39,7 @@ public class MscloudgatewayApplication {
 				// caminho "/clients/**" para o microserviço "msclients" usando balanceamento de carga (lb)
 				.route(r -> r.path("/clients/**").uri("lb://msclients"))
 				.route(r -> r.path("/cards/**").uri("lb://mscards"))
+				.route(r -> r.path("/analysis_credit/**").uri("lb://mscreditappraiser"))
 				.build();
 	}
 }

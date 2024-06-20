@@ -130,7 +130,7 @@
 
   Gerencia a emissão de cartões de crédito para clientes.
 
-  1. #### ***Cadastrar cartão (POST)***:
+  1. #### Cadastrar cartão (POST):
 
      - ##### Input:
 
@@ -192,9 +192,11 @@
        ###### **URL**: `http://localhost:8080/card?cpf=11111111111`
 
        > **Nota:** Utilize o parâmetro de consulta `cpf` para especificar o CPF do cliente. O serviço Gateway encaminhará a solicitação ao microserviço de cartões.
+       >
+       > 
 
        ###### REQUEST PARAM:
-
+     
        ```
        {
          "cpf": "string"
@@ -204,7 +206,7 @@
        
 
      - ##### output:
-
+     
        ```
        [
          {
@@ -218,6 +220,109 @@
   ### 3. Serviço de Análise de Crédito
 
   Realiza análise de crédito com base nos dados dos clientes.
+
+  1. #### Consultar situação do cliente (GET):
+
+     - ##### Input:
+
+       ###### **URL**: `http://localhost:8080/analysisCredit?cpf=11111111111`
+
+       > **Nota:** O serviço Gateway está configurado para escutar na porta `8080`. Ao fazer uma chamada para a URL acima, a solicitação é encaminhada automaticamente pelo Gateway para o microserviço de Análise de Crédito, graças à especificação do caminho `/analysisCredit`.
+       >
+       > **Nota:** Utilize o parâmetro de consulta `cpf` para especificar o cliente.
+
+       ###### REQUEST PARAM::
+
+       ```
+       "cpf": "string",
+       ```
+
+     - ##### **Output**: `Dados do cliente e Cartões do cliente
+
+       ```
+       {
+         "cpf": "string",
+         "nome": "string",
+         "idade": "int",
+         "cartoes":[
+          		{
+           		"name": "string",
+          			"bandeira": "string",
+           		"limite": "number"
+       		 }
+         ]
+        }
+       
+       ```
+
+       
+
+  2. #### **Avaliação do cliente (POST)**:
+
+     Avalia quais cartões determinado clinete pode ter, por meio de envio de CPF e RENDA e retorna a lista de cartões
+
+     - ##### Input
+
+       **URL**: `http://localhost:8080/analysisCredit`
+
+       
+
+       ###### BODY:
+
+       ```
+         {
+           "cpf": "string",
+           "renda": "number",
+         }
+       ```
+
+     - ##### output:
+
+       ```
+       [
+       	{
+           	"cartao": "string",
+          		"bandeira": "string",
+           	"limiteAprovado": "number"
+       	 }
+       ]
+       ```
+
+  3. #### **Solicitar Cartão**:
+
+     Realiza a solicitação de um cartão disponível
+
+     - ##### **Input**
+
+       ###### **URL**: `http://localhost:8080/analysisCredit`
+
+       > **Nota:** Empty
+
+       ###### BODY
+
+       ```
+       {
+           "idCartao": "number",
+          	"cpf": "string",
+          	"endereco":"string"
+       }
+       ```
+
+       ##### **Output**
+
+       ###### **URL**: `http://localhost:8080/analysisCredit`
+
+       > **Nota:** Empty
+
+       ###### JSON
+
+       ```
+       {
+          	"protocolo": "string",
+       }
+       ```
+
+       
 
   ### 4. Serviço de Gestão de Crédito
 
