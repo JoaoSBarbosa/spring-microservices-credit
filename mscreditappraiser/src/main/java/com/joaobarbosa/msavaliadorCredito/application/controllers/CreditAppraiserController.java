@@ -1,8 +1,11 @@
 package com.joaobarbosa.msavaliadorCredito.application.controllers;
 
+import com.joaobarbosa.msavaliadorCredito.application.exception.ClientDataNotFoundException;
+import com.joaobarbosa.msavaliadorCredito.application.exception.MicroserviceCommunicationErrorException;
 import com.joaobarbosa.msavaliadorCredito.application.services.CreditAppraiserService;
 import com.joaobarbosa.msavaliadorCredito.domain.dto.ClientSituationDTO;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,20 +20,22 @@ public class CreditAppraiserController {
     private final CreditAppraiserService creditAppraiserService;
 
     @GetMapping
-    public String status (){
+    public String status() {
         return "MS CREDIT OK";
     }
 
     @GetMapping(value = "/situation_client", params = "cpf")
-    public ResponseEntity<ClientSituationDTO> queryClientSituation(@RequestParam("cpf") String cpf){
+    public ResponseEntity queryClientSituation(@RequestParam("cpf") String cpf) {
 
-        // Consultar microserviço de cliente para obter os dados do client
+        try {
+            ClientSituationDTO clientSituationDTO = creditAppraiserService.creditAppraiser(cpf);
+            return ResponseEntity.ok(clientSituationDTO);
 
-        ClientSituationDTO clientSituationDTO = creditAppraiserService.creditAppraiser(cpf);
-        // consultar miscroserviço de cartões para obter os dados de cartões associado ao cliente
-
-        return ResponseEntity.ok(clientSituationDTO);
+        } catch (ClientDataNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        } catch (MicroserviceCommunicationErrorException e) {
+            return ResponseEntity.status(HttpStatus.resolve(e.getStatus())).body(e.getMessage());
+        }
     }
-
 
 }
