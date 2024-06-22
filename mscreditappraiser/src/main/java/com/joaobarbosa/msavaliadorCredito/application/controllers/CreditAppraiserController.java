@@ -3,14 +3,13 @@ package com.joaobarbosa.msavaliadorCredito.application.controllers;
 import com.joaobarbosa.msavaliadorCredito.application.exception.ClientDataNotFoundException;
 import com.joaobarbosa.msavaliadorCredito.application.exception.MicroserviceCommunicationErrorException;
 import com.joaobarbosa.msavaliadorCredito.application.services.CreditAppraiserService;
+import com.joaobarbosa.msavaliadorCredito.domain.dto.AssessmentData;
 import com.joaobarbosa.msavaliadorCredito.domain.dto.ClientSituationDTO;
+import com.joaobarbosa.msavaliadorCredito.domain.dto.ReturnCustomerReviewDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RestController
@@ -31,6 +30,20 @@ public class CreditAppraiserController {
             ClientSituationDTO clientSituationDTO = creditAppraiserService.creditAppraiser(cpf);
             return ResponseEntity.ok(clientSituationDTO);
 
+        } catch (ClientDataNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        } catch (MicroserviceCommunicationErrorException e) {
+            return ResponseEntity.status(HttpStatus.resolve(e.getStatus())).body(e.getMessage());
+        }
+    }
+
+    @PostMapping
+    public ResponseEntity carryAssessment(@RequestBody AssessmentData assessmentData) {
+
+        try {
+            ReturnCustomerReviewDTO returnCustomerReviewDTO = creditAppraiserService.carryAssessment(assessmentData.getCpf(), assessmentData.getIncome());
+
+            return ResponseEntity.ok().body(returnCustomerReviewDTO);
         } catch (ClientDataNotFoundException e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         } catch (MicroserviceCommunicationErrorException e) {
