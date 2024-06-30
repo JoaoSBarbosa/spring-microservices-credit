@@ -15,7 +15,7 @@
 	<description>Projeto de uma aplicação Java baseada em microserviços projetada para lidar com vários aspectos da gestão de clientes e serviços de crédito.</description>
 
 	<properties>
-		<java.version>17</java.version>
+		<java.version>17.0.11</java.version>
 		<spring-cloud.version>2021.0.1</spring-cloud.version>
 	</properties>
 

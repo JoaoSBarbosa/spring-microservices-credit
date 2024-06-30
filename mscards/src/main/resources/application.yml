@@ -5,8 +5,8 @@ spring:
     host: localhost
     port: 5672
     stream:
-      username: guest
-      password: guest
+      username: wolf
+      password: 123
 
 server:
   port: 0  # Configura o servidor para escolher uma porta aleatoria disponivel, �til para evitar conflitos de porta
