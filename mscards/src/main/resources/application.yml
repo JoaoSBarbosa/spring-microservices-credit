@@ -1,18 +1,28 @@
 spring:
   application:
-    name: mscards  # Define o nome da aplica��o como "mscards"
+    name: mscards  # Define o nome da aplicacao como "mscards"
+  rabbitmq:
+    host: localhost
+    port: 5672
+    stream:
+      username: guest
+      password: guest
 
 server:
-  port: 0  # Configura o servidor para escolher uma porta aleat�ria dispon�vel, �til para evitar conflitos de porta
+  port: 0  # Configura o servidor para escolher uma porta aleatoria disponivel, �til para evitar conflitos de porta
 
-# Configura��o para inscri��o do microservi�o no servidor Eureka
+# Configura��o para inscricao do microservico no servidor Eureka
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka  # Define a URL do servidor Eureka para o registro do microservi�o
+      defaultZone: http://localhost:8761/eureka  # Define a URL do servidor Eureka para o registro do microservico
 
   instance:
     # Configuracao para nomear a instancia do microservico
     # Usa uma combinacao do nome da aplicacao e um valor aleatorio como ID da instancia
     # Isso garante que cada instancia do servico tenha um ID unico, evitando conflitos
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+mq:
+  queue:
+    emissao-cartoes: emissao-cartoes
