@@ -2,10 +2,9 @@ package com.joaobarbosa.msavaliadorCredito.application.controllers;
 
 import com.joaobarbosa.msavaliadorCredito.application.exception.ClientDataNotFoundException;
 import com.joaobarbosa.msavaliadorCredito.application.exception.MicroserviceCommunicationErrorException;
+import com.joaobarbosa.msavaliadorCredito.application.exception.RequestCardException;
 import com.joaobarbosa.msavaliadorCredito.application.services.CreditAppraiserService;
-import com.joaobarbosa.msavaliadorCredito.domain.dto.AssessmentData;
-import com.joaobarbosa.msavaliadorCredito.domain.dto.ClientSituationDTO;
-import com.joaobarbosa.msavaliadorCredito.domain.dto.ReturnCustomerReviewDTO;
+import com.joaobarbosa.msavaliadorCredito.domain.dto.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -51,4 +50,14 @@ public class CreditAppraiserController {
         }
     }
 
+    @PostMapping("/requestCards")
+    public ResponseEntity requestCardIssue(@RequestBody CardIssuanceRequestDataDTO cardIssuanceRequestDataDTO){
+
+        try {
+            ProtocolRequestCardDTO protocolRequestCardDTO = creditAppraiserService.requestCardIssue(cardIssuanceRequestDataDTO);
+            return ResponseEntity.ok().body(protocolRequestCardDTO);
+        }catch (RequestCardException e){
+            return ResponseEntity.internalServerError().body(e.getMessage());
+        }
+    }
 }
