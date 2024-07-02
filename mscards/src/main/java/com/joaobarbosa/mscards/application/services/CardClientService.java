@@ -16,15 +16,9 @@ public class CardClientService {
 
     private final CardClientRepository clientRepository;
 
-
     @Transactional(readOnly = true)
     public List<CardClient> getCardsByClient(String cpf) {
-
        return  clientRepository.findByCPF(cpf);
-//        if (cardClients.isEmpty()) {
-//            throw new ControllerNotFoundException("Entidade Cartão de Cliente não possui registros associado ao CPF informado: " + cpf);
-//        }
-//        return cardClients;
     }
 
 }

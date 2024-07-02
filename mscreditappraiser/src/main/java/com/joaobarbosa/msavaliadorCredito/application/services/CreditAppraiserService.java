@@ -46,7 +46,9 @@ public class CreditAppraiserService {
 
             // Obtendo dados do microserviço de cartões
             ResponseEntity<List<CardClientDTO>> cardClientDTO = cardsResourceClient.getCardsClientByCPF(cpf);
-
+            System.out.println("CARD: " + cardClientDTO); // Log detalhado
+            System.out.println("TESTE - VALOR QUE VEIO MS CARD:"+cardClientDTO.getBody());
+            System.out.println("TESTE - VALOR QUE VEIO MS CLIENTE:"+cardClientDTO.getBody());
             return ClientSituationDTO
                     .builder()
                     .client(clientSituationResponse.getBody())

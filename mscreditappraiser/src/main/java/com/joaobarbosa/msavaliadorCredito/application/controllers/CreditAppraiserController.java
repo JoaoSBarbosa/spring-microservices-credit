@@ -53,6 +53,7 @@ public class CreditAppraiserController {
     @PostMapping("/requestCards")
     public ResponseEntity requestCardIssue(@RequestBody CardIssuanceRequestDataDTO cardIssuanceRequestDataDTO){
 
+        System.out.println("CHEGOU NA API");
         try {
             ProtocolRequestCardDTO protocolRequestCardDTO = creditAppraiserService.requestCardIssue(cardIssuanceRequestDataDTO);
             return ResponseEntity.ok().body(protocolRequestCardDTO);

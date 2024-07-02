@@ -58,6 +58,7 @@ public class CardsResource {
     public ResponseEntity<List<CardClientResponseDTO>> getCardsClientByCPF(@RequestParam("cpf") String cpf) {
         List<CardClient> cardClients = cardClientService.getCardsByClient(cpf);
         List<CardClientResponseDTO> cardsClientDTO = cardClients.stream().map(CardClientResponseDTO::fromEntity).collect(Collectors.toList());
+        System.out.println("EM CARD: " + cardsClientDTO);
         return ResponseEntity.ok(cardsClientDTO);
     }
 }
