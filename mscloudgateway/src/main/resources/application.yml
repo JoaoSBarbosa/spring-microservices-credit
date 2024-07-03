@@ -1,15 +1,18 @@
 spring:
   application:
     name: mscloudgateway
-
-
   cloud:
     gateway:
       discovery:
         locator:
-          enabled: true # habilitando o localizador de serviços
-          lower-case-service-id: true #definindo que a localização sera por lowercase(caixa baixa)
-
+          enabled: true # habilitando o localizador de serviï¿½os
+          lower-case-service-id: true #definindo que a localizaï¿½ï¿½o sera por lowercase(caixa baixa)
+  # Link que gateway devera acessar para validar token
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8081/realms/mscourserealm
 server:
   port: 8080 # porta fixa porque o gatway tera apenas uma instancia
 
