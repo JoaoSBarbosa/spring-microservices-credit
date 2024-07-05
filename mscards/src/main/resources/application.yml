@@ -14,9 +14,8 @@ server:
 # Configura��o para inscricao do microservico no servidor Eureka
 eureka:
   client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka  # Define a URL do servidor Eureka para o registro do microservico
-
+    serviceUrl:
+      defaultZone: http://eureka:123@localhost:8761/eureka
   instance:
     # Configuracao para nomear a instancia do microservico
     # Usa uma combinacao do nome da aplicacao e um valor aleatorio como ID da instancia
