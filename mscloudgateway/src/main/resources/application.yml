@@ -12,7 +12,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8081/realms/mscourserealm
+          issuer-uri: http://localhost:8081/realms/WolfDeveloper
 server:
   port: 8080 # porta fixa porque o gatway tera apenas uma instancia
 
