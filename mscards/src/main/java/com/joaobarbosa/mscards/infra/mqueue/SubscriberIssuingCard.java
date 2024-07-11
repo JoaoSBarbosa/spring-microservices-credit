@@ -7,11 +7,13 @@ import com.joaobarbosa.mscards.domain.CardClient;
 import com.joaobarbosa.mscards.domain.dto.CardIssuanceRequestDataDTO;
 import com.joaobarbosa.mscards.infra.repositories.CardClientRepository;
 import com.joaobarbosa.mscards.infra.repositories.CardRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
 
+@Slf4j
 @Component
 public class SubscriberIssuingCard {
 
@@ -40,7 +42,8 @@ public class SubscriberIssuingCard {
             cardClientRepository.save(cardClient);
 
         }catch (Exception e){
-            e.printStackTrace();
+            log.error("Erro ao receber a solicitação de emessão de cartão:{} ", e.getMessage());
+//            e.printStackTrace();
         }
     }
 }
