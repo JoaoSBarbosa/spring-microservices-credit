@@ -35,3 +35,10 @@ management:
 logging:
   file:
     name: ./logs/log-file.log
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html

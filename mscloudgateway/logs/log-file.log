@@ -1,0 +1,44 @@
+2024-07-10 21:46:54.147  INFO 21787 --- [main] c.j.m.MscloudgatewayApplication          : Starting MscloudgatewayApplication using Java 17.0.11 on joao-B560M-AORUS-ELITE with PID 21787 (/home/joao/Workspace/JAVA/spring-microservices-credit/mscloudgateway/target/classes started by joao in /home/joao/Workspace/JAVA/spring-microservices-credit/mscloudgateway)
+2024-07-10 21:46:54.148  INFO 21787 --- [main] c.j.m.MscloudgatewayApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-07-10 21:46:54.674  INFO 21787 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3489667a-ed6f-367f-a08f-99e6caf9f3ae
+2024-07-10 21:46:54.714  INFO 21787 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 21:46:54.715  INFO 21787 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 21:46:54.716  INFO 21787 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 21:46:55.113  INFO 21787 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2024-07-10 21:46:55.114  INFO 21787 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2024-07-10 21:46:55.114  INFO 21787 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2024-07-10 21:46:55.114  INFO 21787 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2024-07-10 21:46:55.114  INFO 21787 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2024-07-10 21:46:55.114  INFO 21787 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2024-07-10 21:46:55.114  INFO 21787 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2024-07-10 21:46:55.114  INFO 21787 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2024-07-10 21:46:55.114  INFO 21787 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2024-07-10 21:46:55.114  INFO 21787 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2024-07-10 21:46:55.114  INFO 21787 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2024-07-10 21:46:55.114  INFO 21787 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2024-07-10 21:46:55.114  INFO 21787 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2024-07-10 21:46:55.114  INFO 21787 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2024-07-10 21:46:55.367  INFO 21787 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2024-07-10 21:46:55.554  INFO 21787 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-07-10 21:46:55.577  WARN 21787 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-07-10 21:46:55.609  INFO 21787 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-07-10 21:46:55.625  INFO 21787 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-07-10 21:46:55.628  INFO 21787 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-07-10 21:46:55.638  INFO 21787 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-07-10 21:46:55.638  INFO 21787 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-07-10 21:46:55.638  INFO 21787 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-07-10 21:46:55.638  INFO 21787 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-07-10 21:46:55.638  INFO 21787 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-07-10 21:46:55.638  INFO 21787 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-07-10 21:46:55.638  INFO 21787 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-07-10 21:46:55.879  INFO 21787 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-07-10 21:46:55.881  INFO 21787 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-07-10 21:46:55.882  INFO 21787 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-07-10 21:46:55.884  INFO 21787 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1720658815884 with initial instances count: 4
+2024-07-10 21:46:55.885  INFO 21787 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MSCLOUDGATEWAY with eureka with status UP
+2024-07-10 21:46:55.885  INFO 21787 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1720658815885, current=UP, previous=STARTING]
+2024-07-10 21:46:55.886  INFO 21787 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSCLOUDGATEWAY/192.168.18.215:mscloudgateway:8080: registering service...
+2024-07-10 21:46:55.972  INFO 21787 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSCLOUDGATEWAY/192.168.18.215:mscloudgateway:8080 - registration status: 204
+2024-07-10 21:46:55.976  INFO 21787 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2024-07-10 21:46:55.976  INFO 21787 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2024-07-10 21:46:56.003  INFO 21787 --- [main] c.j.m.MscloudgatewayApplication          : Started MscloudgatewayApplication in 2.097 seconds (JVM running for 2.391)
