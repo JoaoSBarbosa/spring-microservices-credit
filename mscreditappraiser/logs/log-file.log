@@ -1,66 +1,41 @@
-2024-07-10 21:46:05.536  INFO 21363 --- [main] c.j.m.CreditAppraiserApplication         : Starting CreditAppraiserApplication using Java 17.0.11 on joao-B560M-AORUS-ELITE with PID 21363 (/home/joao/Workspace/JAVA/spring-microservices-credit/mscreditappraiser/target/classes started by joao in /home/joao/Workspace/JAVA/spring-microservices-credit/mscreditappraiser)
-2024-07-10 21:46:05.537  INFO 21363 --- [main] c.j.m.CreditAppraiserApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-07-10 21:46:06.024  INFO 21363 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=130237ba-4603-3f34-9ca3-cb2134ef0a72
-2024-07-10 21:46:06.179  INFO 21363 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2024-07-10 21:46:06.183  INFO 21363 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-07-10 21:46:06.183  INFO 21363 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
-2024-07-10 21:46:06.235  INFO 21363 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-07-10 21:46:06.236  INFO 21363 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 677 ms
-2024-07-10 21:46:06.421  INFO 21363 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'msclients' URL not provided. Will try picking an instance via load-balancing.
-2024-07-10 21:46:06.457  INFO 21363 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'mscards' URL not provided. Will try picking an instance via load-balancing.
-2024-07-10 21:46:06.996  INFO 21363 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2024-07-10 21:46:07.017  WARN 21363 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2024-07-10 21:46:07.021  INFO 21363 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
-2024-07-10 21:46:07.076  INFO 21363 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 34063 (http) with context path ''
-2024-07-10 21:46:07.077  INFO 21363 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 34063
-2024-07-10 21:46:07.079  INFO 21363 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2024-07-10 21:46:07.095  INFO 21363 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2024-07-10 21:46:07.097  INFO 21363 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-07-10 21:46:07.106  INFO 21363 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2024-07-10 21:46:07.106  INFO 21363 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2024-07-10 21:46:07.106  INFO 21363 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2024-07-10 21:46:07.106  INFO 21363 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2024-07-10 21:46:07.106  INFO 21363 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2024-07-10 21:46:07.106  INFO 21363 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2024-07-10 21:46:07.106  INFO 21363 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2024-07-10 21:46:07.286  INFO 21363 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2024-07-10 21:46:07.287  INFO 21363 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2024-07-10 21:46:07.289  INFO 21363 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2024-07-10 21:46:07.292  INFO 21363 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1720658767291 with initial instances count: 4
-2024-07-10 21:46:07.293  INFO 21363 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MSCREDITAPPRAISER with eureka with status UP
-2024-07-10 21:46:07.293  INFO 21363 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1720658767293, current=UP, previous=STARTING]
-2024-07-10 21:46:07.294  INFO 21363 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSCREDITAPPRAISER/mscreditappraiser:495701e378aade04d3eb365fd0603211: registering service...
-2024-07-10 21:46:07.308  INFO 21363 --- [main] c.j.m.CreditAppraiserApplication         : Started CreditAppraiserApplication in 2.009 seconds (JVM running for 2.269)
-2024-07-10 21:46:07.375  INFO 21363 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSCREDITAPPRAISER/mscreditappraiser:495701e378aade04d3eb365fd0603211 - registration status: 204
-2024-07-10 21:46:07.653  INFO 21363 --- [RMI TCP Connection(2)-127.0.0.1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2024-07-10 21:46:07.654  INFO 21363 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-10 21:46:07.654  INFO 21363 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-07-10 21:46:07.656  INFO 21363 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-07-10 21:46:07.678  INFO 21363 --- [RMI TCP Connection(2)-127.0.0.1] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#71567f33:0/SimpleConnection@6351ced7 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 50256]
-2024-07-10 21:47:41.727  INFO 21363 --- [http-nio-auto-1-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 63 ms
-2024-07-10 21:51:07.107  INFO 21363 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-07-10 21:56:07.108  INFO 21363 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-07-10 22:01:07.109  INFO 21363 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-07-10 22:06:07.110  INFO 21363 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-07-10 22:11:07.111  INFO 21363 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-07-10 22:16:07.112  INFO 21363 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-07-10 22:21:07.112  INFO 21363 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-07-10 22:22:07.797  INFO 21363 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSCREDITAPPRAISER/mscreditappraiser:495701e378aade04d3eb365fd0603211 - Re-registering apps/MSCREDITAPPRAISER
-2024-07-10 22:22:07.798  INFO 21363 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSCREDITAPPRAISER/mscreditappraiser:495701e378aade04d3eb365fd0603211: registering service...
-2024-07-10 22:22:07.802  INFO 21363 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSCREDITAPPRAISER/mscreditappraiser:495701e378aade04d3eb365fd0603211 - registration status: 204
-2024-07-10 22:22:37.935  INFO 21363 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2024-07-10 22:22:37.935  INFO 21363 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2024-07-10 22:22:37.935  INFO 21363 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2024-07-10 22:22:37.935  INFO 21363 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2024-07-10 22:22:37.935  INFO 21363 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2024-07-10 22:22:37.935  INFO 21363 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
-2024-07-10 22:22:37.935  INFO 21363 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2024-07-10 22:22:37.940  INFO 21363 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2024-07-10 22:23:23.553  INFO 21363 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MSCREDITAPPRAISER with eureka with status DOWN
-2024-07-10 22:23:23.553  INFO 21363 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1720661003553, current=DOWN, previous=UP]
-2024-07-10 22:23:23.553  INFO 21363 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSCREDITAPPRAISER/mscreditappraiser:495701e378aade04d3eb365fd0603211: registering service...
-2024-07-10 22:23:23.557  INFO 21363 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSCREDITAPPRAISER/mscreditappraiser:495701e378aade04d3eb365fd0603211 - registration status: 204
-2024-07-10 22:23:23.569  INFO 21363 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2024-07-10 22:23:26.572  INFO 21363 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2024-07-10 22:23:26.578  INFO 21363 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSCREDITAPPRAISER/mscreditappraiser:495701e378aade04d3eb365fd0603211 - deregister  status: 200
-2024-07-10 22:23:26.588  INFO 21363 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2024-07-18 20:59:36.975  INFO 17600 --- [main] c.j.m.CreditAppraiserApplication         : Starting CreditAppraiserApplication using Java 17.0.11 on joao with PID 17600 (D:\Workspace\JAVA\spring-microservices-credit\mscreditappraiser\target\classes started by joao in D:\Workspace\JAVA\spring-microservices-credit\mscreditappraiser)
+2024-07-18 20:59:36.978  INFO 17600 --- [main] c.j.m.CreditAppraiserApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-07-18 20:59:37.650  INFO 17600 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=130237ba-4603-3f34-9ca3-cb2134ef0a72
+2024-07-18 20:59:37.839  INFO 17600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-07-18 20:59:37.847  INFO 17600 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-18 20:59:37.847  INFO 17600 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2024-07-18 20:59:37.952  INFO 17600 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-18 20:59:37.952  INFO 17600 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 943 ms
+2024-07-18 20:59:38.177  INFO 17600 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'msclients' URL not provided. Will try picking an instance via load-balancing.
+2024-07-18 20:59:38.216  INFO 17600 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'mscards' URL not provided. Will try picking an instance via load-balancing.
+2024-07-18 20:59:39.152  INFO 17600 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-07-18 20:59:39.178  WARN 17600 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-07-18 20:59:39.182  INFO 17600 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2024-07-18 20:59:39.248  INFO 17600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 54727 (http) with context path ''
+2024-07-18 20:59:39.249  INFO 17600 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 54727
+2024-07-18 20:59:39.252  INFO 17600 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-07-18 20:59:39.272  INFO 17600 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-07-18 20:59:39.276  INFO 17600 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-07-18 20:59:39.293  INFO 17600 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-07-18 20:59:39.293  INFO 17600 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-07-18 20:59:39.293  INFO 17600 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-07-18 20:59:39.293  INFO 17600 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-07-18 20:59:39.293  INFO 17600 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-07-18 20:59:39.293  INFO 17600 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-07-18 20:59:39.293  INFO 17600 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-07-18 20:59:39.509  INFO 17600 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-07-18 20:59:39.511  INFO 17600 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-07-18 20:59:39.512  INFO 17600 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-07-18 20:59:39.515  INFO 17600 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1721347179514 with initial instances count: 2
+2024-07-18 20:59:39.516  INFO 17600 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MSCREDITAPPRAISER with eureka with status UP
+2024-07-18 20:59:39.516  INFO 17600 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1721347179516, current=UP, previous=STARTING]
+2024-07-18 20:59:39.517  INFO 17600 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSCREDITAPPRAISER/mscreditappraiser:b3817a9037fdad995f9efb5384a6abf4: registering service...
+2024-07-18 20:59:39.606  INFO 17600 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSCREDITAPPRAISER/mscreditappraiser:b3817a9037fdad995f9efb5384a6abf4 - registration status: 204
+2024-07-18 20:59:39.618  INFO 17600 --- [main] c.j.m.CreditAppraiserApplication         : Started CreditAppraiserApplication in 3.013 seconds (JVM running for 3.55)
+2024-07-18 20:59:39.887  INFO 17600 --- [RMI TCP Connection(1)-192.168.18.215] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-07-18 20:59:39.887  INFO 17600 --- [RMI TCP Connection(2)-192.168.18.215] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-18 20:59:39.887  INFO 17600 --- [RMI TCP Connection(2)-192.168.18.215] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-18 20:59:39.888  INFO 17600 --- [RMI TCP Connection(2)-192.168.18.215] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-07-18 20:59:39.921  INFO 17600 --- [RMI TCP Connection(1)-192.168.18.215] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#22da200e:0/SimpleConnection@1a0f1197 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 54732]
+2024-07-18 21:04:39.298  INFO 17600 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-07-18 21:09:39.303  INFO 17600 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
