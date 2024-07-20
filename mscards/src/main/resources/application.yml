@@ -2,7 +2,8 @@ spring:
   application:
     name: mscards  # Define o nome da aplicacao como "mscards"
   rabbitmq:
-    host: localhost
+#    host: localhost
+    host: cursoms-rabbitmq #docker
     port: 5672
     stream:
       username: guest
@@ -15,7 +16,8 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka:123@localhost:8761/eureka
+#      defaultZone: http://eureka:123@localhost:8761/eureka
+      defaultZone: http://eureka:123@cursoms-eureka:8761/eureka #docker
   instance:
     # Configuracao para nomear a instancia do microservico
     # Usa uma combinacao do nome da aplicacao e um valor aleatorio como ID da instancia
