@@ -1,4 +1,4 @@
-- ![GitHub top language](https://img.shields.io/github/languages/top/JoaoSBarbosa/spring-microservices-credit) ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/JoaoSBarbosa/spring-microservices-credit) ![Último commit](https://img.shields.io/github/last-commit/JoaoSBarbosa/spring-microservices-credit?label=%C3%9Altimo%20commit) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.6.4-brightgreen) ![Java Version](https://img.shields.io/badge/Java-17-blue) ![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-2021.0.3-blue) ![Maven Central](https://img.shields.io/maven-central/v/org.springframework.cloud/spring-cloud-dependencies) ![Eureka Server](https://img.shields.io/badge/Eureka%20Server-enabled-brightgreen) ![Eureka Client](https://img.shields.io/badge/Eureka%20Client-enabled-brightgreen) ![Spring Cloud Gateway](https://img.shields.io/badge/Spring%20Cloud%20Gateway-enabled-brightgreen)
+ ![GitHub top language](https://img.shields.io/github/languages/top/JoaoSBarbosa/spring-microservices-credit) ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/JoaoSBarbosa/spring-microservices-credit) ![Último commit](https://img.shields.io/github/last-commit/JoaoSBarbosa/spring-microservices-credit?label=%C3%9Altimo%20commit) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.6.4-brightgreen) ![Java Version](https://img.shields.io/badge/Java-17-blue) ![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-2021.0.3-blue) ![Maven Central](https://img.shields.io/maven-central/v/org.springframework.cloud/spring-cloud-dependencies) ![Eureka Server](https://img.shields.io/badge/Eureka%20Server-enabled-brightgreen) ![Eureka Client](https://img.shields.io/badge/Eureka%20Client-enabled-brightgreen) ![Spring Cloud Gateway](https://img.shields.io/badge/Spring%20Cloud%20Gateway-enabled-brightgreen)
 
   
 
@@ -11,6 +11,16 @@
   
 
   # Projeto de Microserviços para Registro de Clientes, Emissão de Cartão de Crédito, Análise de Crédito e Gestão de Crédito
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+![Spring Cloud](https://img.shields.io/badge/Spring_Cloud-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Spring Data JPA](https://img.shields.io/badge/Spring_Data_JPA-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![H2 Database](https://img.shields.io/badge/H2-003545?style=for-the-badge&logo=h2&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white)
+![Keycloak](https://img.shields.io/badge/Keycloak-0078D7?style=for-the-badge&logo=keycloak&logoColor=white)
 
   ## Visão Geral
 
