@@ -12,7 +12,8 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8081/realms/msvalidador
+#          issuer-uri: http://localhost:8081/realms/msvalidador
+          issuer-uri: http://${KEYCLOAK_SERVER}:${KEYCLOAK_PORT}/realms/msvalidador
 server:
   port: 8080 # porta fixa porque o gatway tera apenas uma instancia
 
@@ -21,7 +22,7 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://eureka:123@localhost:8761/eureka
+      defaultZone: http://eureka:123@${EUREKA_SERVER}:8761/eureka
 
 management:
   endpoints:
